@@ -6,22 +6,17 @@
 
 int main(void)
 {
-	int num;
+char num;
 
-	for (num = 1; num < 100; num++)
+for (num = 1; num < 100; num++)
 	{
-		if (num < 10)
-		{
-			putchar('0' + num);
-			putchar(',');
-			putchar(' ');
-		}
-		else
-		{
-			putchar(num);
-			putchar(',');
-			putchar(' ');
-		}
+putchar(num);
+putchar(',');
+putchar(' ');
+if (num < 10)
+{
+	putchar('0' + num);
+}
 	}
 	putchar('\n');
 	return (0);
