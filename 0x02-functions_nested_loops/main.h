@@ -3,5 +3,6 @@
 
 int _putchar(char c);
 int _isalpha(int c);
+nt print_sign(int n);
 
 #endif
