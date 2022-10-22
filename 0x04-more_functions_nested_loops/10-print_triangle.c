@@ -2,11 +2,11 @@
 
 /**
  * print_triangle - Entry
- * @size: print
+ * @n: print
  *
  */
 
-void print_triangle(int size)
+void print_triangle(int n)
 {
 int h, tri;
 
@@ -30,4 +30,4 @@ continue;
 _putchar('\n');
 }
 }
-
+}
