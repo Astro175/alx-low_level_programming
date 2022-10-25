@@ -2,7 +2,7 @@
 
 /**
  * _strlen - Entry
- * s: ch
+ * @s: print
  * Return: 0
  */
 
