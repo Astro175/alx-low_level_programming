@@ -1,0 +1,19 @@
+#include "lists.h"
+
+/**
+  * print_listint - Prints elements of a list
+  * @h : Singly linked list
+  */
+
+size_t print_listint(const listint_t *h)
+{
+	size_t nodes;
+
+	while (h != NULL)
+	{
+		printf("%d", h->n);
+		nodes++;
+		h = h->next;
+	}
+	return (nodes);
+}
