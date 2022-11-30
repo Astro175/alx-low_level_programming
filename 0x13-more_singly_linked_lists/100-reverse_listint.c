@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-  * print_listint_safe- Prints a linked list
+  * reverse_listint- Prints a linked list
   * @head: Pointer pointing to the first node
   * Return: size
   */
