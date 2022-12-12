@@ -1,23 +1,26 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - Prints a combination of two digit numbers
  * Return: 0
  */
 
 int main(void)
 {
-char num;
+	int i, j;
 
-for (num = 1; num < 100; num++)
+	for (i = 0; i < 10; i++)
 	{
-putchar(num);
-putchar(',');
-putchar(' ');
-if (num < 10)
-{
-	putchar('0' + num);
-}
+		for (j = i + 1; j < 10; j++)
+		{
+			if (i < j)
+			{
+				putchar('0' + i);
+				putchar('0' + j);
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
 	putchar('\n');
-	return (0);
+	return 0;
 }
