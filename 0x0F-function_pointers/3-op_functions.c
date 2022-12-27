@@ -9,7 +9,6 @@
 
 int op_add(int a, int b)
 {
-	int result = a + b;
 	return (a + b);
 }
 
