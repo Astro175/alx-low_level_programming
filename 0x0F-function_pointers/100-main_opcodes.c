@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int num_bytes, i;
-	char *main_addr;
+	void *main_addr;
 
 	if (argc != 2)
 	{
@@ -27,14 +27,16 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	main_addr = (char *)main;
+	main_addr = (void *)main;
 
 	for (i = 0; i < num_bytes; i++)
 	{
-		printf("%02x", main_addr[i] & 0xFF);
+		printf("%02x", *((unsigned char*)main_addr + i));
 		if (i != num_bytes - 1)
 			printf(" ");
 	}
+
+	printf("\n");
 
 	return (0);
 }
