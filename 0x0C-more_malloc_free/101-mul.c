@@ -8,15 +8,9 @@
  * Return: result
  */
 
-int *mul(int num1, int num2)
+int mul(int num1, int num2)
 {
-	int *multiply = malloc(sizeof(int));
-
-	if (multiply == NULL)
-		return (NULL);
-	*multiply = num1 * num2;
-
-	return (multiply);
+	return (num1 * num2);
 }
 
 /**
@@ -28,9 +22,7 @@ int *mul(int num1, int num2)
 
 int main(int argc, char *argv[])
 {
-	int i, j, num1, num2;
-
-	int *result;
+	int i, j, num1, num2, result;
 
 	if (argc != 3)
 	{
@@ -54,8 +46,7 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[2]);
 
 	result = mul(num1, num2);
-	printf("%d\n", *result);
-	free(result);
+	printf("%d\n", result);
 
 	return (0);
 }
