@@ -11,6 +11,7 @@
 int *mul(int num1, int num2)
 {
 	int *multiply = malloc(sizeof(int));
+
 	if (multiply == NULL)
 		return (NULL);
 	*multiply = num1 * num2;
@@ -28,6 +29,7 @@ int *mul(int num1, int num2)
 int main(int argc, char *argv[])
 {
 	int i, j, num1, num2;
+
 	int *result;
 
 	if (argc != 3)
@@ -53,6 +55,7 @@ int main(int argc, char *argv[])
 
 	result = mul(num1, num2);
 	printf("%d\n", *result);
+	free(result);
 
 	return (0);
 }
