@@ -32,6 +32,8 @@ int main(int argc, char *argv[])
 	for (i = 0; i < num_bytes; i++)
 	{
 		printf("%02x", *((unsigned char *)main_addr + i));
+		if (i != num_bytes - 1)
+			printf(" ");
 	}
 
 	return (0);
