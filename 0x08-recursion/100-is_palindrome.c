@@ -10,23 +10,19 @@
 
 int is_palindrome(char *s)
 {
-	int len;
-	int i;
+	char *substr;
+	int result;
+	if (*s == '\0' || *(s + 1) == '\0')
+		return 1;
 
-	len = 0;
+	if (*s != *(s + strlen(s) - 1))
+		return 0;
 
-	while (*s != '\0')
-	{
-		s++;
-		len++;
-	}
+	substr = malloc(strlen(s) - 2 + 1);
+	memcpy(substr, s + 1, strlen(s) - 2);
+	substr[strlen(s) - 2] = '\0';
 
-	for (i = 0; i < len / 2; i++)
-	{
-		if (s[i] != s[len - i - 1])
-		{
-			return (0);
-		}
-	}
-	return (1);
+	result = is_palindrome(substr);
+	free(substr);
+	return result;
 }
